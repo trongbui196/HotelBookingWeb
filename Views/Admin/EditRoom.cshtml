@@ -1,0 +1,37 @@
+﻿@model WebApplication1.Models.Phong
+@{
+    ViewData["Title"] = "EditRoom";
+    Layout = "~/Views/Shared/_LayouAdmin.cshtml";
+}
+
+<div style="width:70%; margin:0 auto">
+    <h1>Chỉnh sửa Phòng</h1>
+    <form asp-action="EditRoom" method="post">
+
+        <div>
+            <label>Mã phòng</label>
+            <input readonly asp-for="Idroom"/>
+        </div>
+        <div>
+            <label>Số Phòng</label>
+            <input readonly asp-for="Sophong" />
+        </div>
+        <div>
+            <label>Mã khách sạn</label>
+            <input readonly asp-for="Idksan" />
+        </div>
+        <div>
+            <label>Mã loại phòng</label>
+            <input readonly asp-for="Roomtypeid" />
+        </div>
+        <div>
+            <label>Trạng thái</label>
+            <input asp-for="Trangthai" />
+        </div>
+ 
+        <button class="btn-primary" type="submit">Lưu thông tin</button>
+        <button> <a asp-controller="Admin" asp-action="Phong">Trở lại</a> </button>
+    </form>
+
+</div>
+

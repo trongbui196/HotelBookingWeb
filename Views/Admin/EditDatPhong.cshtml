@@ -1,0 +1,45 @@
+﻿@model WebApplication1.Models.Reserved
+@{
+    ViewData["Title"] = "EditDatPhong";
+    Layout = "~/Views/Shared/_LayouAdmin.cshtml";
+}
+
+
+<div style="width:70%; margin:0 auto">
+    <h1>Chỉnh sửa Đặt Phòng</h1>
+    <form asp-action="EditDatPhong" method="post">
+
+        <div>
+            <label>Mã Đặt Phòng</label>
+            <input readonly asp-for="Reservedid" />
+        </div>
+        <div>
+            <label>Mã khách sạn</label>
+            <input readonly asp-for="Idksan" />
+        </div>
+        <div>
+            <label>Mã Phòng</label>
+            <input asp-for="Idroom" />
+        </div>
+        <div>
+            <label>Mã Khách</label>
+            <input asp-for="Iduser" />
+        </div>
+        <div>
+            <label>Check in</label>
+            <input asp-for="Checkin" />
+        </div>
+        <div>
+            <label>Check out</label>
+            <input readonly asp-for="Checkout" />
+        </div>
+        <div>
+            <label>Trạng thái</label>
+            <input asp-for="Thanhtoanchua" />
+        </div>
+        <button class="btn-primary" type="submit">Lưu thông tin</button>
+        <button> <a asp-controller="Admin" asp-action="DatPhong">Trở lại</a> </button>
+    </form>
+
+</div>
+

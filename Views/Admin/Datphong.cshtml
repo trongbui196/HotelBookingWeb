@@ -1,0 +1,45 @@
+﻿@model X.PagedList.IPagedList<Reserved>
+@using X.PagedList.Mvc.Core 
+@{
+    ViewData["Title"] = "Datphong";
+    Layout = "~/Views/Shared/_LayouAdmin.cshtml";
+}
+
+
+<div style="margin:0 auto;text-align:center;justify-content:center">
+   
+    <h1>Quản Lý Đặt Phòng</h1> <button><a asp-action="AddDatPhong">Đặt phòng mới</a></button>
+    <table style="margin:auto" border="1px solid black">
+        <tr>
+            <th>Mã Đặt Phòng</th>
+            <th>Ngày Checkin</th>
+            <th>Ngày Checkout</th>
+            <th>Mã Khách Sạn</th>
+            <th>Mã Phòng</th>
+            <th>Mã Tài Khoản</th>
+            <th>Trạng thái</th>
+            <th></th>
+            <th></th>
+            
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Reservedid</td>
+                <td>@item.Checkin</td>
+                <td>@item.Checkout</td>
+                <td>@item.Idksan</td>
+                <td>@item.Idroom</td>
+                <td>@item.Iduser</td>
+                <td>@item.Thanhtoanchua</td>
+                <td><a asp-action="EditDatPhong" asp-route-eid="@item.Reservedid">Chỉnh sửa</a> </td>
+                <td><a asp-action="XoaDatPhong" asp-route-rs="@item.Reservedid">Xoa</a></td>
+                
+            </tr>
+        }
+    </table>
+</div>
+
+<div style="display:block;" class="page-nav">
+    @Html.PagedListPager(Model, page => Url.Action("Datphong", new { page = page }))
+</div>

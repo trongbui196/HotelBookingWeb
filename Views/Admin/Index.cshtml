@@ -1,0 +1,25 @@
+﻿@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_LayouAdmin.cshtml";
+}
+@model WebApplication1.Models.Admin
+<div class="formlogin" style="margin-top:20%">
+<div class="center-div">
+<h1>Đăng nhập</h1>
+<form  asp-action="Index" method="post">
+    <div  class="gridd">
+        <div class="gridditem">
+                    <label>Email:</label>
+                </div>
+                <div class="gridditem">
+                                <input asp-for="Emailadmin" value="admin@admin.com" /> <br /></div>
+                <div class="gridditem">
+        <label>Mật khẩu</label> </div>
+                <div class="gridditem">
+        <input asp-for="Passwordadmin" value="123456" /><br /></div>
+   
+            </div> <button style="color:white;background: linear-gradient(to right, #99004d 0%, #ff0080 100%);border:1px solid #62f321;border-radius:15px;padding:10px" type="submit">Đăng nhập</button>
+        </form>
+
+    </div>
+</div>

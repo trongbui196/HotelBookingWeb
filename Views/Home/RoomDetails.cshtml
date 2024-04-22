@@ -1,0 +1,94 @@
+﻿  @model WebApplication1.Models.Loaiphong
+@{
+    ViewData["Title"] = "Chi tiết phòng";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="hero-wrap" style="background-image: url('../images/bg_3.jpg');">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row no-gutters slider-text d-flex align-itemd-center justify-content-center">
+            <div class="col-md-9 ftco-animate text-center d-flex align-items-end justify-content-center">
+                <div class="text">
+                    <p class="breadcrumbs mb-2"><span class="mr-2"><a asp-controller="Home" asp-action="Index">Home</a></span> <span class="mr-2"><a href="rooms.html">Rooms</a></span> 
+                    <h1 class="mb-4 bread">Chi tiết phòng</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="ftco-section">
+    <div class="row text-center justify-content-center breadcrumbs">
+
+    </div>
+    <div class="container">
+        <div class="row justify-content-center">
+            <h2>@Html.DisplayFor(model=>model.Loaiphong1)</h2>
+        </div>
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="row">
+                    <div class="col-md-12 ftco-animate">
+                        <div class="single-slider owl-carousel">
+                            <div class="item">
+                                <div class="room-img" style="background-image: url(../images/room-4.jpg);"></div>
+                            </div>
+                            <div class="item">
+                                <div class="room-img" style="background-image: url(../images/room-5.jpg);"></div>
+                            </div>
+                            <div class="item">
+                                <div class="room-img" style="background-image: url(../images/room-6.jpg);"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 room-single mt-4 mb-5 ftco-animate">
+                        <h2 class="mb-4">Mô tả phòng</h2>
+                        <p>
+                            Phòng đơn thoải mái và tiện nghi, tạo điều kiện thuận lợi cho du khách muốn tận hưởng không gian riêng tư và thoải mái sau một ngày dài tham quan và khám phá. Với thiết kế đẹp mắt và tiện nghi hiện đại, phòng đơn là lựa chọn lý tưởng cho du khách cá nhân mong muốn một không gian riêng tư và thoải mái trong thời gian lưu trú. Phòng đơn được trang bị đầy đủ tiện nghi và dịch vụ chất lượng, mang lại cảm giác ấm áp và tiện lợi cho du khách đang tìm kiếm một nơi lưu trú đáng nhớ..
+                        </p>
+                       
+                    </div>
+                    
+
+                    
+                </div>
+            </div> <!-- .col-md-8 -->
+            <div class="col-lg-4 sidebar ftco-animate pl-md-5">
+               <h5>Giá phòng 1 đêm: @Html.DisplayFor(model=>model.Gia) vnđ</h5>
+                
+                <div class="d-md-flex mt-5 mb-5" style="color:black">
+                    <ul class="list"> 
+                        
+                        <i class="fa-solid fa-person"></i>
+                        <span style="color:black ">Số lượng khách:</span> @Html.DisplayFor(model => model.Size) người
+                        <br />
+                        <i class="fa-solid fa-square"></i>
+                        <span>Diện tích:</span> @Html.DisplayFor(model => model.Dientich) m2
+                        <br />
+                        <i class="fa-solid fa-bed"></i>
+                        <span>Loại giường:Giường đôi</span><br />
+                        <i class="fa-solid fa-bed"></i>
+                        <span>Số giường: @Html.DisplayFor(model => model.Bed)</span>
+                        <br />
+                    </ul>
+                    
+                   
+                </div>
+                <hr>
+                <ul style="color:black">
+                    <h5>Tiện ích phòng:</h5>
+                    <li><i class="fa-solid fa-bowl-food"></i>  Bữa sáng miễn phí</li>
+                    <li><i class="fa-solid fa-car"></i>  Xe đón tại chỗ</li>
+                    <li><i class="fa-solid fa-square-parking"></i>  Giữ xe miễn phí</li>
+                    <li><i class="fa-solid fa-wifi"></i>  Wifi miễn phí</li>
+                    <li><i class="fa-solid fa-tv"></i>  Tivi </li>
+                    <li><i class="fa-solid fa-snowflake"></i>  Máy lạnh</li>
+                    <li><i class="fa-solid fa-bell"></i>  Dịch vụ phòng</li>
+                      
+                </ul>
+
+                
+            </div>
+        </div>
+    </div>
+</section> 

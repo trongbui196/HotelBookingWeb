@@ -1,0 +1,36 @@
+﻿ @model X.PagedList.IPagedList<Khachsan>
+@{
+    ViewData["Title"] = "Quản trị chi nhánh";
+    Layout = "~/Views/Shared/_LayouAdmin.cshtml";
+}
+<div style="margin-left:100px;text-align:center;justify-content:center">
+<h1>Chi Nhánh</h1>
+<table style="margin:auto" border="1px solid black">
+    <tr>
+        <th>Mã Khách Sạn</th>
+        <th>Mã Thành Phố</th>
+        <th>Tên Chi Nhánh</th>
+        <th>Địa Chỉ</th>
+        <th>Số điện thoại</th>
+        <th>Link ảnh</th>
+        <th>Tác vụ</th>
+    </tr>
+    @foreach(var item in Model)
+    {
+        <tr>
+            <td>@item.Idkhachsan</td>
+            <td>@item.Idthanhpho</td>
+            <td>@item.Tenchinhanh</td>
+            <td>@item.Diachiks</td>
+            <td>@item.Sdtks</td>
+            <td>@item.Img</td>
+            <td><a asp-action="EditHotel" asp-route-eid="@item.Idkhachsan">Chỉnh sửa</a> </td>
+        </tr>
+    }
+</table>
+</div>
+@using X.PagedList.Mvc.Core;
+<div style="display:block" class="page-nav">
+    @Html.PagedListPager(Model, page => Url.Action("Chinhanh", new { page = page }))
+</div>
+</div>

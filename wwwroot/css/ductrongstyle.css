@@ -1,0 +1,23 @@
+﻿.ductronggrid
+{
+    display:grid;
+    grid-template-columns:1fr 2fr;
+    grid-template-rows:repeat(5 1fr);
+}
+.ductronggriditem select{
+    display:block;
+    width:85%;
+    margin-left:25px;
+    padding:5px;
+   
+}
+.upperdashboard {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 3rem;
+}
+
+.chartdashboard {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}

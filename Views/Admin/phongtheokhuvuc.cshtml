@@ -1,0 +1,177 @@
+﻿@{
+    ViewData["Title"] = "Phong";
+    Layout = "~/Views/Shared/_LayouAdmin.cshtml";
+}
+@model X.PagedList.IPagedList<Phong>
+<div style="display:grid;grid-template-columns:1fr 3fr">
+    <div>
+        <table style="text-align:right" border="1px solid black">
+            <tr>
+                <th>
+                    Chi nhánh
+                </th>
+            </tr>
+            <tr>
+                <td> <a asp-action="phongtheokhuvuc" asp-route-cid="1">Bình Thạnh</a></td>
+            </tr>
+            <tr>
+                <td>
+                    <a asp-action="phongtheokhuvuc" asp-route-cid="2"> Quận 1</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a asp-action="phongtheokhuvuc" asp-route-cid="3">  Quận 3</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a asp-action="phongtheokhuvuc" asp-route-cid="4">   Quận 7</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a asp-action="phongtheokhuvuc" asp-route-cid="5">  Thành phố Thủ Đức</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a asp-action="phongtheokhuvuc" asp-route-cid="6">  Ba Đình</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a asp-action="phongtheokhuvuc" asp-route-cid="7">Cầu Giấy</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a asp-action="phongtheokhuvuc" asp-route-cid="8">  Đống Đa</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a asp-action="phongtheokhuvuc" asp-route-cid="9">  Hai Bà Trưng</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a asp-action="phongtheokhuvuc" asp-route-cid="10">Liên Chiểu</a>
+                </td>
+            <tr>
+                <td>
+                    <a asp-action="phongtheokhuvuc" asp-route-cid="11"> Hải Châu</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a asp-action="phongtheokhuvuc" asp-route-cid="12"> Ngũ Hành Sơn</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a asp-action="phongtheokhuvuc" asp-route-cid="13"> Sơn Trà</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a asp-action="phongtheokhuvuc" asp-route-cid="14">  Phường 1</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a asp-action="phongtheokhuvuc" asp-route-cid="15">  Phường 2</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a asp-action="phongtheokhuvuc" asp-route-cid="16">  Phường 3</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a asp-action="phongtheokhuvuc" asp-route-cid="17">  Phường 6</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a asp-action="phongtheokhuvuc" asp-route-cid="18"> Vĩnh Hải</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a asp-action="phongtheokhuvuc" asp-route-cid="19"> Vĩnh Phước</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a asp-action="phongtheokhuvuc" asp-route-cid="20">  Vĩnh Trường</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a asp-action="phongtheokhuvuc" asp-route-cid="21"> Vĩnh Nguyên</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a asp-action="phongtheokhuvuc" asp-route-cid="22"> Hòn Móng Tay</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a asp-action="phongtheokhuvuc" asp-route-cid="23"> Đảo Hòn Một</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a asp-action="phongtheokhuvuc" asp-route-cid="24">  Hòn Dăm</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a asp-action="phongtheokhuvuc" asp-route-cid="25"> Hòn Bướm</a>
+                </td>
+            </tr>
+
+            </tr>
+        </table>
+    </div>
+    <div>
+        <h1 style="text-align:Center">Phòng</h1>
+
+        <div style="text-align:center;justify-content:center">
+
+            <table style="margin:auto" border="1px solid black">
+                <tr>
+                    <th>Mã Phòng</th>
+                    <th>Số Phòng</th>
+                    <th>Mã Loại Phòng</th>
+                    <th>Mã Khách Sạn</th>
+                    <th>Trạng thái</th>
+
+                    <th>Tác vụ</th>
+                </tr>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.Idroom</td>
+                        <td>@item.Sophong</td>
+                        <td>@item.Roomtypeid</td>
+                        <td>@item.Idksan</td>
+                        <td>@item.Trangthai</td>
+
+                        <td><a asp-action="EditRoom" asp-route-eid="@item.Idroom">Chỉnh sửa</a> </td>
+                    </tr>
+                }
+            </table>
+            @using X.PagedList.Mvc.Core;
+
+        </div>
+        <div style="margin-top:20px">
+            <div style="display:block;" class="page-nav">
+                @Html.PagedListPager(Model, page => Url.Action("phongtheokhuvuc", new { page = page }))
+            </div>
+        </div>
+    </div>
+</div>

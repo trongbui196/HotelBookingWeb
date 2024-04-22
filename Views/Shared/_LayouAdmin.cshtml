@@ -1,0 +1,80 @@
+﻿@inject IHttpContextAccessor Accessor﻿
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://kit.fontawesome.com/664e282a54.js" crossorigin="anonymous"></script>
+    <script src="~/js/admin.js"></script>
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/css/siteadmin.css" asp-append-version="true" />
+
+</head>
+<body class="sidebar-menu-collapsed">
+
+    <!-- sidebar menu start -->
+    <div class="sidebar-menu sticky-sidebar-menu">
+
+        <!-- logo start -->
+        <div class="logo">
+            <h1><a asp-controller="Admin" asp-action="Dashboard">Collective</a></h1>
+        </div>
+
+        <!-- if logo is image enable this -->
+        <!-- image logo --
+          <div class="logo">
+        <a asp-controller="Admin" asp-action="Dashboard">
+              <img src="image-path" alt="Your logo" title="Your logo" class="img-fluid" style="height:35px;" />
+            </a>
+          </div>
+          <!-- //image logo -->
+
+        <div class="logo-icon text-center">
+            <a asp-controller="Admin" asp-action="Dashboard" l" title="logo"><i class="fa-solid fa-hippo"></i> </a>
+        </div>
+        <!-- //logo end -->
+
+        <div class="sidebar-menu-inner">
+
+            <!-- sidebar nav start -->
+            <ul class="nav nav-pills nav-stacked custom-nav">
+                <li>
+
+                    <a asp-controller="Admin" asp-action="Dashboard"><i class="fa fa-tachometer"></i><span> Dashboard</span></a>
+
+                </li>
+                <li><a asp-controller="Admin" asp-action="thanhpho">Thành Phố</a></li>
+                <li><a asp-controller="Admin" asp-action="chinhanh">Chi Nhánh</a></li>
+                <li><a asp-controller="Admin" asp-action="phong">Phòng</a></li>
+                <li><a asp-controller="Admin" asp-action="datphong">Phòng Đặt</a></li>
+            @if (Accessor.HttpContext.Session.GetString("email") != null)
+            {
+                    <li class="nav-item"><a asp-controller="Admin" asp-action="Logout" class="nav-link">Đăng xuất</a></li>
+            }
+            </ul>
+            <!-- //sidebar nav end -->
+            <!-- toggle button start -->
+            <a class="toggle-btn">
+                <i class="fa fa-angle-double-left menu-collapsed__left"><span>Collapse Sidebar</span></i>
+                <i class="fa fa-angle-double-right menu-collapsed__right"></i>
+            </a>
+            <!-- //toggle button end -->
+        </div>
+    </div>
+    <!-- //sidebar menu end -->
+    <!-- header-starts -->
+    <div class="header sticky-header">
+
+        <!-- notification menu start -->
+        <div class="menu-right">
+            <div class="navbar user-panel-top">
+              <h1 style="">QUẢN LÝ ĐỨC TRỌNG HOTEL </h1>
+
+            </div>
+        </div>
+        <!--notification menu end -->
+    </div>
+    @RenderBody()
+</body>
+</html>

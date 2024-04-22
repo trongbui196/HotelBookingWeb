@@ -1,0 +1,54 @@
+﻿@model WebApplication1.Models.Userr
+ @{
+    ViewData["Title"] = "Đăng nhập";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<script>
+    console.log("test");
+    function onSignIn(googleUser) {
+        var profile = googleUser.getBasicProfile();
+        console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+        console.log('Name: ' + profile.getName());
+        console.log('Image URL: ' + profile.getImageUrl());
+        console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+    }
+</script>
+<div class="hero-wrap" style="background-image: url('../images/bg_3.jpg');">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row no-gutters slider-text d-flex align-itemd-center justify-content-center">
+            <div class="col-md-9 ftco-animate text-center d-flex align-items-end justify-content-center">
+                <div class="text">
+                    <p class="breadcrumbs mb-2"><span class="mr-2"><a asp-controller="Home" asp-action="Index">Home</a></span> <span>About Us</span></p>
+                    <h1 class="mb-4 bread">Đăng nhập</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div style="text-align:center;color:black;background: #fff;border-radius: 5px;height:550px;padding-top:50px;width:500px;margin:0 auto;box-shadow: 0 10px 10px rgba(0, 0, 0, 0.15);">
+    <h1>Đăng nhập</h1>
+        <form asp-action="Login" method="post">
+            
+            <div style="margin-bottom:20px">
+                <input style="padding:10px;width:250px" asp-for="Emailuser" type="text" placeholder="Nhập Email" required value="tofn001@gmail.com">
+                <div class="underline"></div>
+            </div>
+        <div style="margin-bottom:20px">
+            <input style="padding:10px;width:250px" id="pword1" asp-for="Userpassword" type="password" placeholder="Nhập mật khẩu" required value="123">
+                <div class="underline"></div>
+            </div>
+        <div>
+            <input style="color:white;background: linear-gradient(to right, #99004d 0%, #ff0080 100%);border:1px solid #62f321;border-radius:15px;padding:10px" type="submit" name="" value="Đăng nhập">
+            </div>
+        </form>
+        <div class="option1">Chưa có tài khoản? Tạo mới</div>
+    <div style="background: linear-gradient(to right, #FF80BF 0%, #ff0080 100%);width:250px;margin-top:20px !important;margin:0 auto;border-radius:15px;padding:10px">
+        <a style="color:black;font-weight:bold" asp-controller="Home" asp-action="Register"></i>Đăng kí tài khoản mới</a>
+        </div>
+    <div style="background: linear-gradient(to right, #dcecb9 0%, #c7ee70 100%);width:250px;margin-top:20px !important;margin:0 auto;border-radius:15px;padding:10px">
+            <a asp-action="Resetpassword" style="color:black;font-weight:bold"><i class="fa-brands fa-google"></i>Reset Mật Khẩu</a>
+
+    </div> 
+    </div>

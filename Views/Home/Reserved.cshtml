@@ -1,0 +1,191 @@
+﻿ @model WebApplication1.Models.Reserved
+@{
+    ViewData["Title"] = "Đặt phòng";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<script>
+
+    function changeddl(obj) {
+
+        var text = obj.options[obj.selectedIndex].text;
+        var ddl2 = document.querySelectorAll('#iOperation option');
+        for (var i = 1; i < ddl2.length; i++) {
+            var option = ddl2[i];
+            option.style.display = 'none';
+            if (text == 'TP.Hồ Chí Minh') {
+                if (['Bình Thạnh', 'Quận 1', 'Quận 3', 'Quận 7', 'Thủ Đức'].indexOf(option.text) > -1)
+                    option.style.display = 'block'
+
+            }
+            if (text == 'Hà Nội') {
+                if (['Ba Đình', 'Cầu Giấy', 'Đống Đa', 'Hai Bà Trưng'].indexOf(option.text) > -1)
+                    option.style.display = 'block'
+            }
+            if (text == 'Đà Nẵng') {
+                if (['Liên Chiểu', 'Hải Châu', 'Ngũ Hành Sơn', 'Sơn Trà'].indexOf(option.text) > -1)
+                    option.style.display = 'block'
+
+            }
+            if (text == 'Nha Trang') {
+                if (['Vĩnh Hải', 'Vĩnh Phước', 'Vĩnh Trường', 'Vĩnh Nguyên'].indexOf(option.text) > -1)
+                    option.style.display = 'block'
+            }
+            if (text == 'Phú Quốc') {
+                if (['Hòn Móng Tay', 'Đảo Hòn Một', 'Hòn Dăm', 'Hòn Bướm'].indexOf(option.text) > -1)
+                    option.style.display = 'block'
+            }
+            if (text == 'Đà Lạt') {
+                if (['Phường 6', 'Phường 1', 'Phường 2', 'Phường 3'].indexOf(option.text) > -1)
+                    option.style.display = 'block'
+            }
+        }
+    }
+    function changeddl1(obj) {
+
+        var text = obj.options[obj.selectedIndex].text;
+        var ddl2 = document.querySelectorAll('#iOperation1 option');
+        for (var i = 1; i < ddl2.length; i++) {
+            var option = ddl2[i];
+            option.style.display = 'none';
+            if (text == 'Phòng Đơn') {
+                if (['D101', 'D102', 'D103', 'D104', 'D105'].indexOf(option.text) >-1)
+                    option.style.display = 'block'
+
+            }
+            if (text == 'Phòng Đôi') {
+            if (['DD201', 'DD202', 'DD203', 'DD204'].indexOf(option.text) != -1)
+                    option.style.display = 'block'
+            }
+            if (text == 'Phòng Gia Đình') {
+            if (['GD301', 'GD302', 'GD303'].indexOf(option.text)>-1)
+                    option.style.display = 'block'
+
+            }
+            if (text == 'Phòng Thương Gia') {
+                if (['TG401', 'TG402', 'TG403'].indexOf(option.text) > -1)
+                    option.style.display = 'block'
+            }
+            if (text == 'Phòng Tổng Thống') {
+                if (['TT501', 'TT502'].indexOf(option.text) > -1)
+                    option.style.display = 'block'
+            }
+            if (text == 'Phòng Đặc Biệt') {
+                if (['DB777'].indexOf(option.text) > -1)
+                    option.style.display = 'block'
+            }
+        }
+    }
+</script>
+<div class="hero-wrap" style="background-image: url('../images/bg_3.jpg');">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row no-gutters slider-text d-flex align-itemd-center justify-content-center">
+            <div class="col-md-9 ftco-animate text-center d-flex align-items-end justify-content-center">
+                <div class="text">
+                    <p class="breadcrumbs mb-2"><span class="mr-2"><a asp-controller="Home" asp-action="Index">Home</a></span> <span>About Us</span></p>
+                    <h1 class="mb-4 bread">Giới thiệu về chúng tôi</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div style="text-align:center;color:black;background: #fff;border-radius: 5px;padding-top:50px;width:500px;margin:0 auto;box-shadow: 0 10px 10px rgba(0, 0, 0, 0.15);">
+    <form asp-action="Reserved" method="post">
+        <div class="ductronggrid">
+            <div class="ductronggriditem"> <label>Chọn thành phố</label></div>
+            <div class="ductronggriditem">
+                <select id="iFunction" name="nFunction" onchange="changeddl(this)" class="form-control">
+                    <option value="-1" selected="">Select</option>
+                    <option value="1">TP.Hồ Chí Minh</option>
+                    <option value="2">Hà Nội</option>
+                    <option value="3">Đà Nẵng</option>
+                    <option value="5">Nha Trang</option>
+                    <option value="6">Phú Quốc</option>
+                    <option value="4">Đà Lạt</option>
+                </select>
+            </div>
+            <div class="ductronggriditem"> <label>Chọn khách sạn</label></div>
+            <div class="ductronggriditem">
+                <select asp-for="Idksan" id="iOperation" class="form-control">
+                    <option value="-1" selected="">Select</option>
+                    <option value="1">Bình Thạnh</option>
+                     <option value="2">Quận 1</option>
+                    <option value="3">Quận 3</option>
+                    <option value="4">Quận 7</option>
+                    <option value="5">Thủ Đức</option>
+                    <option value="6">Ba Đình</option>
+                    <option value="7">ầu Giấy</option>
+                    <option value="8">Đống Đa</option>
+                    <option value="9">Hai Bà Trưng</option>
+                    <option value="10">Liên Chiểu</option>
+                    <option value="11">Hải Châu</option>
+                    <option value="12">Ngũ Hành Sơn</option>
+                    <option value="13">Sơn Trà</option>
+
+                    <option value="18">Vĩnh Hải</option>
+                    <option value="19">Vĩnh Phước</option>
+                    <option value="20">Vĩnh Trường</option>
+                    <option value="21">Vĩnh Nguyên</option>
+
+                    <option value="22">Hòn Móng Tay</option>
+                    <option value="23">Đảo Hòn Một</option>
+                    <option value="24">Hòn Dăm</option>
+                    <option value="25">Hòn Bướm</option>
+                    <option value="14">Phường 1</option>
+                    <option value="15">Phường 2</option>
+                    <option value="16">Phường 3</option>
+                    <option value="17">Phường 6</option> 
+                </select>
+            </div>
+            <div class="ductronggriditem"> <label>Chọn loại phòng</label></div>
+            <div class="ductronggriditem">
+                <select id="iFunction1" name="nFunction1" onchange="changeddl1(this)">
+                    <option value="-1">Chọn loại phòng</option>
+                    <option value="1">Phòng Đơn</option>
+                    <option value="1">Phòng Đôi</option>
+                    <option value="1">Phòng Gia Đình</option>
+                    <option value="1">Phòng Thương Gia</option>
+                    <option value="1">Phòng Tổng Thống</option>
+                    <option value="1">Phòng Đặc Biệt</option>
+                </select>
+            </div>
+            <div class="ductronggriditem"> <label>Chọn phòng</label></div>
+         
+            <div class="ductronggriditem">
+                <select asp-for="Thanhtoanchua" id="iOperation1">
+                    <option value="null">Chọn phòng</option>
+                    <option value="D101">D101</option>   
+                    <option value="D102">D102</option>
+                    <option value="D103">D103</option>
+                    <option value="DD201">DD201</option>
+                    <option value="DD202">DD202</option>
+                   
+                    <option value="GD301">GD301</option>
+                  
+                    <option value="TG401">TG401</option>
+            
+                    <option value="TT501">TT501</option>
+             
+                    <option value="DB777">DB777</option>            
+                </select>
+            </div>
+            <div class="ductronggriditem"> <label>Chọn ngày checkin</label></div>
+            <div class="ductronggriditem">
+                
+                    <input style="width:85%;color:black" asp-for="Checkin" type="text" class="checkin_date" placeholder="Check-in">
+                
+                
+            </div>
+            <div class="ductronggriditem"> <label>Chọn ngày checkout</label></div>
+            <div class="ductronggriditem">
+
+                <input style="width:85%" asp-for="Checkout" type="text" class="checkout_date" placeholder="Check-out">
+        </div>
+        </div>
+        <button style="margin:0 auto" type="submit">Submit</button>
+    </form> 
+    
+       
+    
+</div>

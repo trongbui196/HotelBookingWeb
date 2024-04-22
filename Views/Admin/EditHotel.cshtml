@@ -1,0 +1,38 @@
+﻿@model WebApplication1.Models.Khachsan
+@{
+    ViewData["Title"] = "EditHotel";
+    Layout = "~/Views/Shared/_LayouAdmin.cshtml";
+}
+<div style="width:70%; margin:0 auto">
+<h1>Chỉnh sửa khách sạn</h1>
+<form asp-action="EditHotel" method="post">
+   
+    <div>
+        <label>Mã thành phố</label>
+        <input readonly asp-for="Idthanhpho" />
+    </div>
+    <div>
+        <label>Mã khách sạn</label>
+        <input readonly asp-for="Idkhachsan"  />
+    </div>
+    <div>
+        <label>Tên Khách sạn</label>
+        <input asp-for="Tenchinhanh" />
+    </div>
+    <div>
+        <label>Đia chỉ</label>
+        <input asp-for="Diachiks"  />
+    </div>
+    <div>
+        <label>Số ĐT </label>
+        <input  asp-for="Sdtks"  />
+    </div>
+    <div>
+        <label>Link ảnh</label>
+        <input readonly asp-for="Img"  />
+    </div>
+    <button class="btn-primary" type="submit">Lưu thông tin</button>
+    <button> <a asp-controller="Admin" asp-action="Chinhanh">Trở lại</a> </button>
+</form>
+
+</div>

@@ -1,0 +1,298 @@
+﻿@{
+    ViewData["Title"] = "Khách sạn Đức Trọng";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<script>
+
+	function changeddl(obj) {
+
+		var text = obj.options[obj.selectedIndex].text;
+		var ddl2 = document.querySelectorAll('#iOperation option');
+		for (var i = 1; i < ddl2.length; i++) {
+			var option = ddl2[i];
+			option.style.display = 'none';
+			if (text == 'TP.Hồ Chí Minh') {
+				if (['Bình Thạnh', 'Quận 1','Quận 3','Quận 7','Thủ Đức'].indexOf(option.text) > -1)
+					option.style.display = 'block'
+
+			}
+			if (text == 'Hà Nội') {
+				if (['Ba Đình', 'Cầu Giấy', 'Đống Đa', 'Hai Bà Trưng'].indexOf(option.text) > -1)
+					option.style.display = 'block'
+			}
+			if (text == 'Đà Nẵng') {
+				if (['Liên Chiểu', 'Hải Châu', 'Ngũ Hành Sơn', 'Sơn Trà'].indexOf(option.text) > -1)
+					option.style.display = 'block'
+					
+			}
+			if (text == 'Nha Trang') {
+				if (['Vĩnh Hải', 'Vĩnh Phước', 'Vĩnh Trường', 'Vĩnh Nguyên'].indexOf(option.text) > -1)
+					option.style.display = 'block'
+			}
+			if(text=='Phú Quốc') {
+				if (['Hòn Móng Tay', 'Đảo Hòn Một', 'Hòn Dăm', 'Hòn Bướm'].indexOf(option.text) > -1)
+					option.style.display = 'block'
+			}
+			if (text == 'Đà Lạt') {
+				if (['Phường 6', 'Phường 1', 'Phường 2', 'Phường 3'].indexOf(option.text) > -1)
+					option.style.display = 'block'
+			}
+		}
+	}
+
+</script>
+
+<div class="hero">
+	<section class="home-slider owl-carousel">
+		<div class="slider-item" style="background-image:url(../images/bg_1.jpg);">
+			<div class="overlay"></div>
+			<div class="container">
+				<div class="row no-gutters slider-text align-items-center justify-content-end">
+					<div class="col-md-6 ftco-animate">
+						<div class="text">
+							<h2>Trải nghiệm khó quên</h2>
+							<h1 class="mb-3">Khách sạn cho mọi người.</h1>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="slider-item" style="background-image:url(../images/bg_2.jpg);">
+			<div class="overlay"></div>
+			<div class="container">
+				<div class="row no-gutters slider-text align-items-center justify-content-end">
+					<div class="col-md-6 ftco-animate">
+						<div class="text">
+							<h2>Khách sạn Đức Trọng</h2>
+							<h1 class="mb-3">Cảm giác như ở chính nhà bạn</h1>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</div>
+
+<section class="ftco-booking ftco-section ftco-no-pt ftco-no-pb">
+	<div class="container">
+		<div class="row no-gutters">
+			<div class="col-lg-12">
+				<form action="#" class="booking-form aside-stretch">
+					<div class="row">
+						<div class="col-md d-flex py-md-4">
+							<div class="form-group align-self-stretch d-flex align-items-end">
+								<div class="wrap align-self-stretch py-3 px-4">
+									<label for="#">Thành phố</label>
+									<div class="form-field">
+										<div class="select-wrap">
+											<div class="icon"><span class="ion-ios-arrow-down"></span></div>
+
+                                            <select id="iFunction" name="nFunction" onchange="changeddl(this)" class="form-control">
+												<option value="-1" selected="">Select</option>
+												<option value="1">TP.Hồ Chí Minh</option>
+												<option value="2">Hà Nội</option>
+												<option value="3">Đà Nẵng</option>
+												<option value="5">Nha Trang</option>
+												<option value="6">Phú Quốc</option>
+												<option value="4">Đà Lạt</option>
+											</select>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md d-flex py-md-4">
+							<div class="form-group align-self-stretch d-flex align-items-end">
+								<div class="wrap align-self-stretch py-3 px-4">
+									<label for="#">Chi nhánh</label>
+									<div class="form-field">
+										<div class="select-wrap">
+											<div class="icon"><span class="ion-ios-arrow-down"></span></div>
+											<select id="iOperation" name="nOperation" class="form-control">
+												<option value="-1" selected="">Select</option>
+												<option value="7">Bình Thạnh</option>
+												<option value="8">Quận 1</option>
+												<option value="9">Quận 3</option>
+												<option value="10">Quận 7</option>
+												<option value="11">Thủ Đức</option>
+												<option value="12">Ba Đình</option>
+												<option value="13">Cầu Giấy</option>
+												<option value="14">Đống Đa</option>
+												<option value="15">Hai Bà Trưng</option>
+                                                <option value="16">Liên Chiểu</option>
+                                                <option value="17">Hải Châu</option>
+                                                <option value="18">Ngũ Hành Sơn</option>
+                                                <option value="19">Sơn Trà</option>
+
+                                                <option value="24">Vĩnh Hải</option>
+                                                <option value="25">Vĩnh Phước</option>
+                                                <option value="26">Vĩnh Trường</option>
+                                                <option value="27">Vĩnh Nguyên</option>
+
+                                                <option value="28">Hòn Móng Tay</option>
+                                                <option value="29">Đảo Hòn Một</option>
+                                                <option value="30">Hòn Dăm</option>
+                                                <option value="31">Hòn Bướm</option>
+												<option value="20">Phường 1</option>
+												<option value="21">Phường 2</option>
+												<option value="22">Phường 3</option>
+												<option value="23">Phường 6</option>
+											</select>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						<div class="col-md d-flex py-md-4">
+							<div class="form-group align-self-stretch d-flex align-items-end">
+								<div class="wrap align-self-stretch py-3 px-4">
+									<label for="#">Phòng</label>
+									<div class="form-field">
+										<div class="select-wrap">
+											<div class="icon"><span class="ion-ios-arrow-down"></span></div>
+											<select name="" id="" class="form-control">
+												<option value="">Phòng đơn</option>
+												<option value="">Phòng đôi</option>
+												<option value="">Phòng gia đình</option>
+												<option value="">Phòng thương gia</option>
+												<option value="">Phòng tổng thống</option>
+												<option value="">Phòng đặc biệt</option>
+											</select>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md d-flex py-md-4">
+							<div class="form-group align-self-stretch d-flex align-items-end">
+								<div class="wrap align-self-stretch py-3 px-4">
+									<label for="#">Số người</label>
+									<div class="form-field">
+										<div class="select-wrap">
+											<div class="icon"><span class="ion-ios-arrow-down"></span></div>
+											<select name="" id="" class="form-control">
+												<option value="">1 Người lớn</option>
+												<option value="">2 Người lớn</option>
+												<option value="">3 Người lớn</option>
+												<option value="">4 Người lớn</option>
+												<option value="">5 Người lớn</option>
+												<option value="">6 Người lớn</option>
+											</select>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md d-flex">
+							<div class="form-group d-flex align-self-stretch">
+								<a asp-action="Reserved" class="btn btn-primary py-5 py-md-3 px-4 align-self-stretch d-block"><span>Xem phòng trống <small>Giá tốt nhất!</small></span></a>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="ftco-section">
+	<div class="container">
+		<div class="row justify-content-center mb-5 pb-3">
+			<div class="col-md-7 heading-section text-center ftco-animate">
+				<span class="subheading">Chào mừng bạn đến với chuỗi khách sạn Đức Trọng</span>
+				<h2 class="mb-4">Không chỉ là nơi dừng chân</h2>
+			</div>
+		</div>
+		<div class="row d-flex">
+			<div class="col-md pr-md-1 d-flex align-self-stretch ftco-animate">
+				<div class="media block-6 services py-4 d-block text-center">
+					<div class="d-flex justify-content-center">
+						<div class="icon d-flex align-items-center justify-content-center">
+							<span class="flaticon-reception-bell"></span>
+						</div>
+					</div>
+					<div class="media-body">
+						<h3 class="heading mb-3">Dịch vụ thân thiện</h3>
+					</div>
+				</div>
+			</div>
+			<div class="col-md px-md-1 d-flex align-self-stretch ftco-animate">
+				<div class="media block-6 services active py-4 d-block text-center">
+					<div class="d-flex justify-content-center">
+						<div class="icon d-flex align-items-center justify-content-center">
+							<span class="flaticon-serving-dish"></span>
+						</div>
+					</div>
+					<div class="media-body">
+						<h3 class="heading mb-3">Bữa sáng miễn phí</h3>
+					</div>
+				</div>
+			</div>
+			<div class="col-md px-md-1 d-flex align-sel Searchf-stretch ftco-animate">
+				<div class="media block-6 services py-4 d-block text-center">
+					<div class="d-flex justify-content-center">
+						<div class="icon d-flex align-items-center justify-content-center">
+							<span class="flaticon-car"></span>
+						</div>
+					</div>
+					<div class="media-body">
+						<h3 class="heading mb-3">Dịch vụ trung chuyển</h3>
+					</div>
+				</div>
+			</div>
+			<div class="col-md px-md-1 d-flex align-self-stretch ftco-animate">
+				<div class="media block-6 services py-4 d-block text-center">
+					<div class="d-flex justify-content-center">
+						<div class="icon d-flex align-items-center justify-content-center">
+							<span class="flaticon-spa"></span>
+						</div>
+					</div>
+					<div class="media-body">
+						<h3 class="heading mb-3">Spa- nghỉ dưỡng</h3>
+					</div>
+				</div>
+			</div>
+			<div class="col-md pl-md-1 d-flex align-self-stretch ftco-animate">
+				<div class="media block-6 services py-4 d-block text-center">
+					<div class="d-flex justify-content-center">
+						<div class="icon d-flex align-items-center justify-content-center">
+							<span class="ion-ios-bed"></span>
+						</div>
+					</div>
+					<div class="media-body">
+						<h3 class="heading mb-3">Không gian ấm cúng</h3>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="ftco-section ftco-wrap-about ftco-no-pt ftco-no-pb">
+	<div class="container">
+		<div class="row no-gutters">
+			<div class="col-md-7 order-md-last d-flex">
+				<div class="img img-1 mr-md-2 ftco-animate" style="background-image: url(../images/about-1.jpg);"></div>
+				<div class="img img-2 ml-md-2 ftco-animate" style="background-image: url(../images/about-2.jpg);"></div>
+			</div>
+			<div class="col-md-5 wrap-about pb-md-3 ftco-animate pr-md-5 pb-md-5 pt-md-4">
+				<div class="heading-section mb-4 my-5 my-md-0">
+					<span class="subheading">Đức Trọng Hotel</span>
+					<h2 class="mb-4">Chuỗi khách sạn cao cấp tiện nghi và ấm cúng</h2>
+				</div>
+				<ul>
+					<li>Dịch vụ chuyên nghiệp và thân thiện</li>
+					<li>Sự thoải mái và tiện nghi</li>
+					<li>Sự sạch sẽ và an toàn</li>
+				</ul>
+				<p><a asp-controller="Home" asp-action="Reserved" class="btn btn-secondary rounded">Đặt phòng ngay</a></p>
+			</div>
+		</div>
+	</div>
+</section>
+

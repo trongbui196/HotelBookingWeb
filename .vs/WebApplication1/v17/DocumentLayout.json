@@ -1,0 +1,149 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\An\\Desktop\\TrongD\\WebApplication1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{9644A303-011A-449E-B051-2A552955B7ED}|WebApplication1.csproj|c:\\users\\an\\desktop\\trongd\\webapplication1\\views\\admin\\dashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9644A303-011A-449E-B051-2A552955B7ED}|WebApplication1.csproj|solutionrelative:views\\admin\\dashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9644A303-011A-449E-B051-2A552955B7ED}|WebApplication1.csproj|C:\\Users\\An\\Desktop\\TrongD\\WebApplication1\\wwwroot\\css\\ductrongstyle.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{9644A303-011A-449E-B051-2A552955B7ED}|WebApplication1.csproj|solutionrelative:wwwroot\\css\\ductrongstyle.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9644A303-011A-449E-B051-2A552955B7ED}|WebApplication1.csproj|C:\\Users\\An\\Desktop\\TrongD\\WebApplication1\\wwwroot\\css\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{9644A303-011A-449E-B051-2A552955B7ED}|WebApplication1.csproj|solutionrelative:wwwroot\\css\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9644A303-011A-449E-B051-2A552955B7ED}|WebApplication1.csproj|C:\\Users\\An\\Desktop\\TrongD\\WebApplication1\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9644A303-011A-449E-B051-2A552955B7ED}|WebApplication1.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9644A303-011A-449E-B051-2A552955B7ED}|WebApplication1.csproj|C:\\Users\\An\\Desktop\\TrongD\\WebApplication1\\views\\shared\\_layouadmin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9644A303-011A-449E-B051-2A552955B7ED}|WebApplication1.csproj|solutionrelative:views\\shared\\_layouadmin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9644A303-011A-449E-B051-2A552955B7ED}|WebApplication1.csproj|C:\\Users\\An\\Desktop\\TrongD\\WebApplication1\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9644A303-011A-449E-B051-2A552955B7ED}|WebApplication1.csproj|solutionrelative:controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9644A303-011A-449E-B051-2A552955B7ED}|WebApplication1.csproj|C:\\Users\\An\\Desktop\\TrongD\\WebApplication1\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9644A303-011A-449E-B051-2A552955B7ED}|WebApplication1.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9644A303-011A-449E-B051-2A552955B7ED}|WebApplication1.csproj|C:\\Users\\An\\Desktop\\TrongD\\WebApplication1\\views\\home\\check.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9644A303-011A-449E-B051-2A552955B7ED}|WebApplication1.csproj|solutionrelative:views\\home\\check.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\An\\Desktop\\TrongD\\WebApplication1\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\An\\Desktop\\TrongD\\WebApplication1\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-15T11:43:34.995Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "_LayouAdmin.cshtml",
+              "DocumentMoniker": "C:\\Users\\An\\Desktop\\TrongD\\WebApplication1\\Views\\Shared\\_LayouAdmin.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_LayouAdmin.cshtml",
+              "ToolTip": "C:\\Users\\An\\Desktop\\TrongD\\WebApplication1\\Views\\Shared\\_LayouAdmin.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_LayouAdmin.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-15T11:43:33.638Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "style.css",
+              "DocumentMoniker": "C:\\Users\\An\\Desktop\\TrongD\\WebApplication1\\wwwroot\\css\\style.css",
+              "RelativeDocumentMoniker": "wwwroot\\css\\style.css",
+              "ToolTip": "C:\\Users\\An\\Desktop\\TrongD\\WebApplication1\\wwwroot\\css\\style.css",
+              "RelativeToolTip": "wwwroot\\css\\style.css",
+              "ViewState": "AQIAAF8nAAAAAAAAAAAAAGwnAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-04-15T11:37:34.265Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\An\\Desktop\\TrongD\\WebApplication1\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\An\\Desktop\\TrongD\\WebApplication1\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Controllers\\HomeController.cs",
+              "ViewState": "AQIAAG8AAAAAAAAAAAAEwHkAAAAKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-14T12:07:29.039Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Check.cshtml",
+              "DocumentMoniker": "C:\\Users\\An\\Desktop\\TrongD\\WebApplication1\\Views\\Home\\Check.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Check.cshtml",
+              "ToolTip": "C:\\Users\\An\\Desktop\\TrongD\\WebApplication1\\Views\\Home\\Check.cshtml",
+              "RelativeToolTip": "Views\\Home\\Check.cshtml",
+              "ViewState": "AQIAACMAAAAAAAAAAAAAADIAAABAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-14T12:05:22.861Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AdminController.cs",
+              "DocumentMoniker": "C:\\Users\\An\\Desktop\\TrongD\\WebApplication1\\Controllers\\AdminController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AdminController.cs",
+              "ToolTip": "C:\\Users\\An\\Desktop\\TrongD\\WebApplication1\\Controllers\\AdminController.cs",
+              "RelativeToolTip": "Controllers\\AdminController.cs",
+              "ViewState": "AQIAAFMAAAAAAAAAAADwv2YAAABBAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-12T12:32:08.329Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Dashboard.cshtml",
+              "DocumentMoniker": "C:\\Users\\An\\Desktop\\TrongD\\WebApplication1\\Views\\Admin\\Dashboard.cshtml",
+              "RelativeDocumentMoniker": "Views\\Admin\\Dashboard.cshtml",
+              "ToolTip": "C:\\Users\\An\\Desktop\\TrongD\\WebApplication1\\Views\\Admin\\Dashboard.cshtml",
+              "RelativeToolTip": "Views\\Admin\\Dashboard.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABsAAAAeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-12T12:20:25.899Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ductrongstyle.css",
+              "DocumentMoniker": "C:\\Users\\An\\Desktop\\TrongD\\WebApplication1\\wwwroot\\css\\ductrongstyle.css",
+              "RelativeDocumentMoniker": "wwwroot\\css\\ductrongstyle.css",
+              "ToolTip": "C:\\Users\\An\\Desktop\\TrongD\\WebApplication1\\wwwroot\\css\\ductrongstyle.css",
+              "RelativeToolTip": "wwwroot\\css\\ductrongstyle.css",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-04-15T11:44:11.141Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

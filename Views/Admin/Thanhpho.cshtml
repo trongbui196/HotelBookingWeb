@@ -1,0 +1,21 @@
+﻿@model IEnumerable<WebApplication1.Models.Thanhpho>
+@{
+    ViewData["Title"] = "Thanhpho";
+    Layout = "~/Views/Shared/_LayouAdmin.cshtml";
+}
+
+<h1 style="text-align:center">Thành Phố</h1>
+<table border="1px solid black" style="margin:0 auto;">
+    <tr>
+        <th>Mã Thành Phố</th>
+        <th>Tên Thành Phố</th>
+    </tr>
+
+@foreach(var item in Model)
+{
+   <tr>
+       <td>@item.Idthanhpho</td>
+       <td>@item.Tenthanhpho</td>
+   </tr>
+}
+</table>

@@ -1,0 +1,126 @@
+﻿
+@{
+    ViewData["Title"] = "Dashboard";
+    Layout = "~/Views/Shared/_LayouAdmin.cshtml";
+}
+<h1>Welcome @ViewBag.email</h1>
+
+<h1 style="text-align:center">Dashboard</h1>
+
+<div class="dashboard center-div">
+    <div class="upperdashboard" style="display:grid;grid-template-columns:1fr 1fr 1fr;border:1px solid black">
+        <div style="border:1px solid black">
+            <p> Số lượng người dùng : @ViewBag.usercount</p>
+        </div>
+        <div style="border:1px solid black">
+            <p> Số lượng đặt phòng : @ViewBag.reservationcount</p>
+        </div>
+        <div style="border:1px solid black">
+            @{
+                int number = 0;
+                if (ViewBag.totalcash != null)
+                {
+                    number = ViewBag.totalcash;
+
+                }
+                string formattedNumber = number.ToString("N0");
+            }
+            <p> Tổng doanh thu : @formattedNumber</p>
+        </div>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;text-align:center;border:1px solid black" class="chartdashboard">
+        <div style="border:1px solid black;text-align:center">
+           <h2> Biểu đồ doanh thu theo người dùng</h2>
+            <canvas style="margin:0 auto" id="myPieChart1" width="400" height="400"></canvas>
+
+           
+        </div>
+        <div style="border:1px solid black"> 
+            <h2>Biểu đồ trạng thái dòng doanh thu</h2>
+            <canvas style="margin:0 auto" id="myPieChart2" width="400" height="400"></canvas></div>
+    </div>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+<script>
+    // Chart 1
+    var piechart1 = @Html.Raw(Json.Serialize(ViewBag.UserExpenses));
+    console.log(piechart1);
+    var labels1 = [];
+    var data1 = [];
+
+    piechart1.forEach(function (item) {
+        labels1.push(item.userEmail); // Use userEmail instead of userId as label
+        data1.push(item.totalMoneySpent);
+    });
+    console.log(labels1);
+    console.log(data1)
+    var ctx1 = document.getElementById('myPieChart1').getContext('2d');
+    var myPieChart1 = new Chart(ctx1, {
+        type: 'pie',
+        data: {
+            labels: labels1,
+            datasets: [{
+                data: data1,
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.7)',
+                    'rgba(54, 162, 235, 0.7)',
+                    'rgba(255, 206, 86, 0.7)',
+                    'rgba(75, 192, 192, 0.7)',
+                    'rgba(153, 102, 255, 0.7)',
+                    'rgba(255, 159, 64, 0.7)'
+                    // Add more colors as needed
+                ],
+            }]
+        },
+        options: {
+            responsive: false,
+            maintainAspectRatio: false,
+            legend: {
+                position: 'bottom'
+            }
+        }
+    });
+
+    // Chart 2
+    var piechart2 = @Html.Raw(Json.Serialize(ViewBag.Trangthaichart));
+    console.log(piechart2);
+    var labels2 = [];
+    var data2 = [];
+
+    piechart2.forEach(function (item) {
+        labels2.push(item.trangthai); // Use userEmail instead of userId as label
+        data2.push(item.tongtien);
+    });
+
+    var ctx2 = document.getElementById('myPieChart2').getContext('2d');
+    var myPieChart2 = new Chart(ctx2, {
+        type: 'pie',
+        data: {
+            labels: labels2,
+            datasets: [{
+                data: data2,
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.7)',
+                    'rgba(54, 162, 235, 0.7)',
+                    'rgba(255, 206, 86, 0.7)',
+                    'rgba(75, 192, 192, 0.7)',
+                    'rgba(153, 102, 255, 0.7)',
+                    'rgba(255, 159, 64, 0.7)'
+                    // Add more colors as needed
+                ],
+            }]
+        },
+        options: {
+            responsive: false,
+            maintainAspectRatio: false,
+            legend: {
+                position: 'bottom'
+            }
+        }
+    });
+
+</script>

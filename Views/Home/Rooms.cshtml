@@ -1,0 +1,110 @@
+﻿@{
+    ViewData["Title"] = "Các phòng tại Đức Trọng";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="hero-wrap" style="background-image: url('../images/bg_3.jpg');">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row no-gutters slider-text d-flex align-itemd-center justify-content-center">
+            <div class="col-md-9 ftco-animate text-center d-flex align-items-end justify-content-center">
+                <div class="text">
+                    <p class="breadcrumbs mb-2"><span class="mr-2"><a asp-controller="Home" asp-action="Index">Trang chủ</a></span> <span><a asp-controller="Home" asp-action="Restaurant">Thực đơn</a></span></p>
+                    <h1 class="mb-4 bread">Hệ thống phòng</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="ftco-section ftco-no-pb ftco-room">
+    <div class="container-fluid px-0">
+        <div class="row no-gutters justify-content-center mb-5 pb-3">
+            <div class="col-md-7 heading-section text-center ftco-animate">
+                <span class="subheading">Đức Trọng Hotel</span>
+                <h2 class="mb-4">Không chỉ là phòng</h2>
+            </div>
+        </div>
+        <div class="row no-gutters">
+            <div class="col-lg-6">
+                <div class="room-wrap d-md-flex ftco-animate">
+                    <a href="#" class="img" style="background-image: url(../images/singleroom.jpg);"></a>
+                    <div class="half left-arrow d-flex align-items-center">
+                        <div class="text p-4 text-center">
+                            <p class="star mb-0"><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span></p>
+                            <p class="mb-0"><span class="price mr-1">320.000 vnđ</span> <span class="per">mỗi đêm</span></p>
+                            <h3 class="mb-3"><a href="rooms.html">Phòng đơn</a></h3>
+                            <p class="pt-1"><a asp-controller="Home" asp-action="RoomDetails" asp-route-rID="1" class="btn-custom px-3 py-2 rounded">Xem chi tiết <span class="icon-long-arrow-right"></span></a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="room-wrap d-md-flex ftco-animate">
+                    <a href="#" class="img" style="background-image: url(../images/doubleroom.jpg);"></a>
+                    <div class="half left-arrow d-flex align-items-center">
+                        <div class="text p-4 text-center">
+                            <p class="star mb-0"><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span></p>
+                            <p class="mb-0"><span class="price mr-1">520.000 vnđ</span> <span class="per">mỗi đêm</span></p>
+                            <h3 class="mb-3"><a href="rooms.html">Phòng đôi</a></h3>
+                            <p class="pt-1"><a asp-controller="Home" asp-action="RoomDetails" asp-route-rID="2" class="btn-custom px-3 py-2 rounded">Xem chi tiết <span class="icon-long-arrow-right"></span></a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="room-wrap d-md-flex ftco-animate">
+                    <a href="#" class="img order-md-last" style="background-image: url(../images/familyroom.jpg);"></a>
+                    <div class="half right-arrow d-flex align-items-center">
+                        <div class="text p-4 text-center">
+                            <p class="star mb-0"><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span></p>
+                            <p class="mb-0"><span class="price mr-1">820.000 vnđ</span> <span class="per">mỗi đêm</span></p>
+                            <h3 class="mb-3"><a href="rooms.html">Phòng gia đình</a></h3>
+                            <p class="pt-1"><a asp-controller="Home" asp-action="RoomDetails" asp-route-rID="3" class="btn-custom px-3 py-2 rounded">Xem chi tiết <span class="icon-long-arrow-right"></span></a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="room-wrap d-md-flex ftco-animate">
+                    <a href="#" class="img order-md-last" style="background-image: url(../images/deluxeroom.jpg);"></a>
+                    <div class="half right-arrow d-flex align-items-center">
+                        <div class="text p-4 text-center">
+                            <p class="star mb-0"><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span></p>
+                            <p class="mb-0"><span class="price mr-1">1.120.000 vnđ</span> <span class="per">mỗi đêm</span></p>
+                            <h3 class="mb-3"><a href="rooms.html">Phòng thương gia</a></h3>
+                            <p class="pt-1"><a asp-controller="Home" asp-action="RoomDetails" asp-route-rID="4" class="btn-custom px-3 py-2 rounded">Xem chi tiết <span class="icon-long-arrow-right"></span></a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="room-wrap d-md-flex ftco-animate">
+                    <a href="#" class="img" style="background-image: url(../images/presidentroom.jpg);"></a>
+                    <div class="half left-arrow d-flex align-items-center">
+                        <div class="text p-4 text-center">
+                            <p class="star mb-0"><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span></p>
+                            <p class="mb-0"><span class="price mr-1">1.420.000 vnđ</span> <span class="per">mỗi đêm</span></p>
+                            <h3 class="mb-3"><a href="rooms.html">Phòng tổng thống</a></h3>
+                            <p class="pt-1"><a asp-controller="Home" asp-action="RoomDetails" asp-route-rID="5" class="btn-custom px-3 py-2 rounded">Xem chi tiết <span class="icon-long-arrow-right"></span></a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="room-wrap d-md-flex ftco-animate">
+                    <a href="#" class="img" style="background-image: url(../images/specialroom.webp);"></a>
+                    <div class="half left-arrow d-flex align-items-center">
+                        <div class="text p-4 text-center">
+                            <p class="star mb-0"><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span><span class="ion-ios-star"></span></p>
+                            <p class="mb-0"><span class="price mr-1">2.120.000 vnđ</span> <span class="per">mỗi đêm</span></p>
+                            <h3 class="mb-3"><a href="rooms.html">Phòng đặc biệt</a></h3>
+                            <p class="pt-1"><a asp-controller="Home" asp-action="RoomDetails" asp-route-rID="6" class="btn-custom px-3 py-2 rounded">Xem chi tiết <span class="icon-long-arrow-right"></span></a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

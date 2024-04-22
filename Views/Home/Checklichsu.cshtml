@@ -1,0 +1,47 @@
+﻿@model IEnumerable<WebApplication1.Models.Tinhtien>
+@{
+    ViewData["Title"] = "Kiểm tra lịch sử";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="hero-wrap" style="background-image: url('../images/bg_3.jpg');">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row no-gutters slider-text d-flex align-itemd-center justify-content-center">
+            <div class="col-md-9 ftco-animate text-center d-flex align-items-end justify-content-center">
+                <div class="text">
+                    <p class="breadcrumbs mb-2"><span class="mr-2"><a asp-controller="Home" asp-action="Index">Home</a></span> <span>About Us</span></p>
+                    <h1 class="mb-4 bread">Giới thiệu về chúng tôi</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div style="text-align:center;justify-content:center;">
+<h1>Checklichsu</h1>
+    <table style="margin:0 auto" border="1px solid black">
+    <tr>
+        <th>Mã đặt phòng</th>
+        <th>Chi nhánh</th>
+        <th>Phòng đặt</th>
+        <th>Thời gian</th>
+        <th>Tổng tiền</th>
+        <th>Trạng thái</th>
+        <th></th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.RId</td>
+            <td>@item.Tenchinhanh</td>
+            <td>@item.Sophong</td>
+            <td>@item.Checkin <span> - </span> @item.Checkout</td>
+            <td>@item.Tongtien</td>
+            <td>@item.Trangthai</td>
+            <td> <button><a asp-action="thanhtoanvnpay" asp-route-id="@item.RId">Thanh toán</a></button></td>
+           
+        </tr>
+    }
+</table>
+<button><a asp-action="Profile">Trở về</a></button>
+</div>
